@@ -1,0 +1,61 @@
+import React, { useState } from 'react';
+import { Header } from './components/header/Header.jsx';
+import { Nav } from './components/nav/Nav.jsx';
+import { About } from './components/about/About.jsx';
+import { Experience } from './components/experience/Experience.jsx';
+import { Portfolio } from './components/portfolio/Portfolio.jsx';
+import { Contact } from './components/contact/Contact.jsx';
+import { Footer } from './components/footer/Footer.jsx';
+import { Ap1 } from './components/portfolio/Ap1.jsx'
+import { Ap3 } from './components/portfolio/Ap3.jsx'
+import { Stage} from './components/portfolio/Stage.jsx'
+
+const App = () => {
+  const [showAp1, setShowAp1] = useState(false)
+  const [showAp3, setShowAp3] = useState(false)
+  const [showStage, setShowStage] = useState(false)
+
+  const toggleAp1 = () => {
+    setShowAp1(!showAp1)
+    if (showAp1) {
+      setShowAp1(false)
+    }
+  }
+  
+  const toggleAp3 = () => {
+    setShowAp3(!showAp3)
+    if (showAp3) {
+      setShowAp3(false)
+    }
+  }
+
+  const toggleStage = () => {
+    setShowStage(!showStage)
+    if (showStage) {
+      setShowStage(false)
+    }
+  }
+
+  const closeDetail = () => {
+    setShowAp1(false)
+    setShowAp3(false)
+    setShowStage(false)
+  }
+
+  return (
+    <>
+      <Header />
+      <Nav />
+      <About />
+      <Experience />
+      <Portfolio onAp1Click={toggleAp1} onAp3Click={toggleAp3} onStageClick={toggleStage} />
+      {showAp1 && <Ap1 onClose={closeDetail} />}
+      {showAp3 && <Ap3 onClose={closeDetail} />}
+      {showStage && <Stage onClose={closeDetail} />}
+      <Contact />
+      <Footer />
+    </>
+  )
+}
+
+export default App;
