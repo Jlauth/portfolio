@@ -11,7 +11,7 @@ export const Ap3 = ({ onClose }) => {
     const handleScrollToTop = () => {
         if (contentRef.current) {
             const rect = contentRef.current.getBoundingClientRect()
-            const scrollY = window.scrollY + rect.top - 1200
+            const scrollY = window.scrollY + rect.top - 1050
             window.scrollTo({ top: scrollY, behavior: 'smooth' })
         }
     }

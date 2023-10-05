@@ -11,7 +11,7 @@ export const Ap1 = ({ onClose }) => {
     const handleScrollToTop = () => {
         if (contentRef.current) {
             const rect = contentRef.current.getBoundingClientRect()
-            const scrollY = window.scrollY + rect.top - 1200
+            const scrollY = window.scrollY + rect.top - 1050
             window.scrollTo({ top: scrollY, behavior: 'smooth' })
         }
     }
@@ -51,9 +51,9 @@ export const Ap1 = ({ onClose }) => {
             <br />
             <h2>Liens documentaires du projet</h2>
             <br />
-            <a href="https://j-lauth.go.yj.fr/mediatekformation/public/" target='_blank' rel="noreferrer">Site web</a><br />
-            <a href='https://jlauth.github.io/bdd' target='_blank' rel="noreferrer">Lien vers la BDD</a><br />
-            <a href='https://jlauth.github.io/DocTechniqueAP1/index.html' target='_blank' rel="noreferrer">Documentation technique</a><br />
+            <a href="https://j-lauth.go.yj.fr/mediatekformation/public/" target='_blank' rel='noreferrer'>Site web</a><br />
+            <a href='https://jlauth.github.io/bdd' target='_blank' rel='noreferrer'>Lien vers la BDD</a><br />
+            <a href='https://jlauth.github.io/DocTechniqueAP1/index.html' target='_blank' rel='noreferrer'>Documentation technique</a><br />
             <a href={Contexte_officiel} download>Contexte officiel</a><br />
             <a href={Contrat_developpement} download>Contrat de développement</a><br />
             <a href={Cahier_des_charges} download>Cahier des charges</a><br />

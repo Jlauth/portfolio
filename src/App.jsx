@@ -19,7 +19,7 @@ const App = () => {
     setShowState(!showState)
     if (!showState) {
       const rect = ref.current.getBoundingClientRect()
-      const scrollY = window.scrollY + rect.top + 1000
+      const scrollY = window.scrollY + rect.top + 800
       window.scrollTo({ top: scrollY, behavior: 'smooth' })
     }
   }
