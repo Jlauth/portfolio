@@ -36,3 +36,19 @@ h3 {
   color: var(--color-bg);
   border-color: transparent;
 }
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+  .ap-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+  }
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+   .ap-container {
+    padding: 20px;
+    margin: 10px;
+  }
+}

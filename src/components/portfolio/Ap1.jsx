@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './ap.css'
 import Dossier_documentaire from '../../assets/ap1/Dossier_documentaire.pdf'
 import Cahier_des_charges from '../../assets/ap1/Cahier_des_charges.pdf'
@@ -7,8 +7,17 @@ import Contexte_officiel from '../../assets/ap1/Contexte_officiel.pdf'
 import Compte_Rendu from '../../assets/ap1/Compte_rendu_AP1_JeanLauth.pdf'
 
 export const Ap1 = ({ onClose }) => {
+    const contentRef = useRef(null)
+    const handleScrollToTop = () => {
+        if (contentRef.current) {
+            const rect = contentRef.current.getBoundingClientRect()
+            const scrollY = window.scrollY + rect.top - 1200
+            window.scrollTo({ top: scrollY, behavior: 'smooth' })
+        }
+    }
+
     return (
-        <div className='ap-container'>
+        <div className='ap-container' ref={contentRef}>
             <h2>Application Web MediatekFormation</h2>
             <p>Atelier professionnel réalisé dans le cadre de ma 2ème année de BTS SIO option SLAM </p>
             <h3>Contexte</h3>
@@ -39,9 +48,9 @@ export const Ap1 = ({ onClose }) => {
                 <li>PHPUnit</li>
                 <li>Selenium</li>
             </ul>
-            <br/>
+            <br />
             <h2>Liens documentaires du projet</h2>
-            <br/>
+            <br />
             <a href="https://j-lauth.go.yj.fr/mediatekformation/public/">Site web</a><br />
             <a href='https://jlauth.github.io/bdd' target='_blank' rel="noreferrer">Lien vers la BDD</a><br />
             <a href='https://jlauth.github.io/DocTechniqueAP1/index.html' target='_blank' rel="noreferrer">Documentation technique</a><br />
@@ -50,7 +59,7 @@ export const Ap1 = ({ onClose }) => {
             <a href={Cahier_des_charges} download>Cahier des charges</a><br />
             <a href={Dossier_documentaire} download>Dossier documentaire</a><br />
             <a href={Compte_Rendu} download>Compte rendu</a>
-            <button className='close-button' onClick={onClose}>Fermer</button>
+            <button className='close-button' onClick={() => { onClose(); handleScrollToTop(); }}>Fermer</button>
         </div>
     )
 }

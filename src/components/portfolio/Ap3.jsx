@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './ap.css'
 import Dossier_documentaire from '../../assets/ap3/Dossier_documentaire_AP3.pdf'
 import Compte_rendu from '../../assets/ap3/Compte_rendu_Atelier3_JeanLauth.pdf'
@@ -7,8 +7,16 @@ import Contexte_officiel from '../../assets/ap3/Contexte_officiel.pdf'
 import Contrat_developpement from '../../assets/ap3/Contrat_developpement.pdf'
 
 export const Ap3 = ({ onClose }) => {
+    const contentRef = useRef(null) 
+    const handleScrollToTop = () => {
+        if (contentRef.current) {
+            const rect = contentRef.current.getBoundingClientRect()
+            const scrollY = window.scrollY + rect.top - 1200
+            window.scrollTo({ top: scrollY, behavior: 'smooth' })
+        }
+    }
     return (
-        <div className='ap-container'>
+        <div className='ap-container' ref={contentRef}>
             <h2>Application de bureau MediatekDocuments</h2>
             <p>Atelier professionnel réalisé dans le cadre de ma 2ème année de BTS SIO option SLAM</p>
             <h3>Contexte</h3>
@@ -34,9 +42,9 @@ export const Ap3 = ({ onClose }) => {
                 <li>SpecFlow</li>
                 <li>Postman</li>
             </ul>
-            <br/>
+            <br />
             <h2>Liens documentaires du projet</h2>
-            <br/>
+            <br />
             <a href="https://github.com/Jlauth/rest_mediatekdocs" target='_blank' rel="noreferrer">Dépot distant API REST</a><br />
             <a href="https://github.com/Jlauth/MediaTekDocuments" target='_blank' rel="noreferrer">Dépot distant application de bureau</a><br />
             <a href="https://jlauth.github.io/bdd" target='_blank' rel="noreferrer">Lien vers la BDD</a>
@@ -47,7 +55,6 @@ export const Ap3 = ({ onClose }) => {
             <a href={Cahier_des_charges} download>Cahier des charges</a><br />
             <a href={Dossier_documentaire} download>Dossier documentaire</a><br />
             <a href={Compte_rendu} download>Compte rendu</a>
-            <button className='close-button' onClick={onClose}>Fermer</button>
-        </div>
+            <button className='close-button' onClick={() => { onClose(); handleScrollToTop(); }}>Fermer</button>        </div>
     )
 }

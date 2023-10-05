@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './ap.css'
 
 export const Stage = ({ onClose }) => {
+    const contentRef = useRef(null)
+    const handleScrollToTop = () => {
+        if (contentRef.current) {
+            const rect = contentRef.current.getBoundingClientRect()
+            const scrollY = window.scrollY + rect.top - 1200
+            window.scrollTo({ top: scrollY, behavior: 'smooth' })
+        }
+    }
     return (
-        <div className='ap-container'>
+        <div className='ap-container' ref={contentRef}>
             <h2>Générateur d'attestations fiscales</h2>
             <p>Stages réalisés dans le cadre de mon cursus en BTS SIO option SLAM</p>
             <h3>Contexte</h3>
@@ -27,12 +35,11 @@ export const Stage = ({ onClose }) => {
                 <li>Swing</li>
                 <li>PDFbox</li>
             </ul>
-            <br/>
+            <br />
             <h2>Liens documentaires du projet</h2>
-            <br/>
+            <br />
             <a href="https://github.com/Jlauth/AttestationFiscalev3" target='_blank' rel="noreferrer">Dépot distant de l'application de bureau</a><br />
             <a href="https://jlauth.github.io/DocTechniqueStage2/index.html" target='_blank' rel="noreferrer">Documentation technique API REST</a>
-            <button className='close-button' onClick={onClose}>Fermer</button>
-        </div>
+            <button className='close-button' onClick={() => { onClose(); handleScrollToTop(); }}>Fermer</button>        </div>
     )
 }

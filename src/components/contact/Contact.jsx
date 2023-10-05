@@ -41,18 +41,18 @@ export const Contact = () => {
             <MdOutlineEmail className='contact__option-icon' />
             <h4>Email</h4>
             <h5>lauth_jean@live.fr</h5>
-            <a href="mailto:lauth_jean@live.fr" target='_blank'>Send a message</a>
+            <a href="mailto:lauth_jean@live.fr" target='_blank' rel="noopener">Send a message</a>
           </article>
           <article className="contact__option">
             <BsSlack className='contact__option-icon' />
             <h4>Slack</h4>
             <h5>Jean lauth</h5>
-            <a href="https://join.slack.com/t/jeanlauthprivate/shared_invite/zt-20j6hvbn7-Sj4Rmx6xx4oh23uE3TL~_Q" target='_blank'>Meet Me There</a>
+            <a href="https://join.slack.com/t/jeanlauthprivate/shared_invite/zt-20j6hvbn7-Sj4Rmx6xx4oh23uE3TL~_Q" target='_blank' rel="noopener">Meet Me There</a>
           </article>
           <article className="contact__option">
             <FaWhatsapp className='contact__option-icon' />
             <h4>WhatsApp</h4>
-            <a href="https://api.whatsapp.com/send?phone=0766054712" target='_blank'>Send a message</a>
+            <a href="https://api.whatsapp.com/send?phone=0766054712" target='_blank' rel="noopener">Send a message</a>
           </article>
         </div>
         {/* END OF CONTACT OPTIONS */}

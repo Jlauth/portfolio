@@ -8,32 +8,32 @@ import { Contact } from './components/contact/Contact.jsx';
 import { Footer } from './components/footer/Footer.jsx';
 import { Ap1 } from './components/portfolio/Ap1.jsx'
 import { Ap3 } from './components/portfolio/Ap3.jsx'
-import { Stage} from './components/portfolio/Stage.jsx'
+import { Stage } from './components/portfolio/Stage.jsx'
 
 const App = () => {
   const [showAp1, setShowAp1] = useState(false)
   const [showAp3, setShowAp3] = useState(false)
   const [showStage, setShowStage] = useState(false)
 
-  const toggleAp1 = () => {
-    setShowAp1(!showAp1)
-    if (showAp1) {
-      setShowAp1(false)
-    }
-  }
-  
-  const toggleAp3 = () => {
-    setShowAp3(!showAp3)
-    if (showAp3) {
-      setShowAp3(false)
+  const scrollToElement = (ref, setShowState, showState) => {
+    setShowState(!showState)
+    if (!showState) {
+      const rect = ref.current.getBoundingClientRect()
+      const scrollY = window.scrollY + rect.top + 1000
+      window.scrollTo({ top: scrollY, behavior: 'smooth' })
     }
   }
 
-  const toggleStage = () => {
-    setShowStage(!showStage)
-    if (showStage) {
-      setShowStage(false)
-    }
+  const toggleAp1 = (ref) => {
+    scrollToElement(ref, setShowAp1, showAp1)
+  }
+
+  const toggleAp3 = (ref) => {
+    scrollToElement(ref, setShowAp3, showAp3)
+  }
+
+  const toggleStage = (ref) => {
+    scrollToElement(ref, setShowStage, showStage)
   }
 
   const closeDetail = () => {
