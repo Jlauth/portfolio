@@ -15,27 +15,27 @@ export const Portfolio = ({ onAp1Click, onAp3Click, onStageClick }) => {
       <h2>Portfolio</h2>
       <div className="container portfolio__container">
         <article className='portfolio__item' ref={ap1Ref}>
-          <img src={IMG1} className='portfolio__img' alt="" />
+          <h3>PHP Symfony study project</h3>
+          <img src={IMG1} className='portfolio__img' alt="Illustration projet d'études PHP Symfony" />
           <div className="portfolio__item-img">
-            <h3>Projet d'études PHP Symfony</h3>
             <div className="portfolio__item-cta">
               <button className='btn btn-primary' onClick={() => onAp1Click(ap1Ref)}>Details</button>
             </div>
           </div>
         </article>
         <article className='portfolio__item' ref={ap3Ref}>
-          <img src={IMG2} alt="" />
+          <h3>C#/API REST study project</h3>
+          <img src={IMG2} alt="Illustration projet d'études C#/API REST" />
           <div className="portfolio__item-img">
-            <h3>Projet d'études C#/API REST</h3>
             <div className="portfolio__item-cta">
               <button className='btn btn-primary' onClick={() => onAp3Click(ap3Ref)}>Details</button>
             </div>
           </div>
         </article>
         <article className='portfolio__item' ref={stageRef}>
-          <img src={IMG3} alt="" />
+          <h3>Java internship work</h3>
+          <img src={IMG3} alt="Illustration travail de stage" />
           <div className="portfolio__item-img">
-            <h3>Travail de stage</h3>
             <div className="portfolio__item-cta">
               <button className='btn btn-primary' onClick={() => onStageClick(stageRef)}>Details</button>
             </div>

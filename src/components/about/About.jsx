@@ -22,7 +22,7 @@ export const About = () => {
 
             <article className='about__card'>
               <FaAward className='about__icon' />
-              <h5>Diplôme</h5>
+              <h5>Diploma</h5>
               <h6>BTS SIO option SLAM</h6>
               <small>Services Informatiques aux Organisations option Solutions Logicielles et Applications Métier</small>
             </article>
@@ -30,15 +30,15 @@ export const About = () => {
             <article className='about__card'>
               <FiUsers className='about__icon' />
               <h5>Pro</h5>
-              <h6>Reconversion professionnelle</h6>
-              <small>Ancien cuisinier, téléconseiller, ouvrier mécanicien</small>
+              <h6>Professional retraining</h6>
+              <small>Former cook, telephone advisor, mechanic worker</small>
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='about__icon' />
-              <h5>Perso</h5>
-              <h6>35 ans, secteur Bayeux (Calvados)</h6>
-              <small>Véhiculé, remote souhaité</small>
+              <h5>Private</h5>
+              <h6>36 ans, Bayeux sector (Calvados)</h6>
+              <small>Vehicle-equipped (car and bike)</small>
             </article>
           </div>
 
