@@ -1,3 +1,7 @@
+# Portfolio de Jean Lauth
+
+Ce portfolio a été créé suite à l'obtention de mon diplôme de BTS SIO option SLAM
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
