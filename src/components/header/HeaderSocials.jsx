@@ -5,9 +5,9 @@ import { FiGithub } from 'react-icons/fi'
 export const HeaderSocials = () => {
   return (
     <div className='header__socials'>
-      <a href="https://linkedin.com" target='__blank'><BsLinkedin /></a>
-      <a href="https://github.com" target='__blank'><FiGithub /></a>
-      <a href="https://slack.com" target='__blank'><BsSlack /></a>
+      <a href="linkedin.com/in/jean-lauth-8b3579171/" target='__blank' rel='noreferrer'><BsLinkedin /></a>
+      <a href="github.com/Jlauth" target='__blank' rel='noreferrer'><FiGithub /></a>
+      <a href="https://join.slack.com/t/jeanlauthprivate/shared_invite/zt-24p5uphr5-2eB3GIYGXk29LiturSSWxA" target='__blank' rel='noreferrer'><BsSlack /></a>
     </div>
   )
 }
