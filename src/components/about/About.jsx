@@ -31,7 +31,7 @@ export const About = () => {
               <FiUsers className='about__icon' />
               <h5>Pro</h5>
               <h6>Professional retraining</h6>
-              <small>Former cook, telephone advisor, mechanic worker</small>
+              <small>Former cook, telephone advisor, mechanic worker, delivery man</small>
             </article>
 
             <article className='about__card'>
