@@ -49,6 +49,14 @@ header {
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
+.me-image {
+    display: block;
+    margin-left: -10%;
+    width: 120%;
+    height: 110%;
+    object-fit: cover;
+}
+
 /* =============== SCROLL DOWN ========== */
 .scroll__down {
     position: absolute;
@@ -72,7 +80,8 @@ header {
         height: 100vh;
     }
 
-    .header__socials, .scroll__down {
+    .header__socials,
+    .scroll__down {
         display: none;
     }
 }
