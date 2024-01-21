@@ -39,7 +39,7 @@ export const Stage = ({ onClose }) => {
             <h2>Liens documentaires du projet</h2>
             <br />
             <a href="https://github.com/Jlauth/AttestationFiscalev3" target='_blank' rel="noreferrer">Dépot distant de l'application de bureau</a><br />
-            <a href="https://jlauth.github.io/DocTechniqueStage2/index.html" target='_blank' rel="noreferrer">Documentation technique API REST</a>
+            <a href="https://jlauth.github.io/DocTechniqueStage2/index.html" target='_blank' rel="noreferrer">Documentation technique</a>
             <button className='close-button' onClick={() => { onClose(); handleScrollToTop(); }}>Fermer</button>        </div>
     )
 }
