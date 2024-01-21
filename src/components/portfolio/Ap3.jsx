@@ -50,7 +50,7 @@ export const Ap3 = ({ onClose }) => {
             <a href="https://jlauth.github.io/bdd" target='_blank' rel="noreferrer">Lien vers la BDD</a><br />
             <a href="https://jlauth.github.io/DocTechniqueAP3/App/html/6ffab7d9-2b08-0510-f0eb-203183a8d528.htm" target='_blank' rel="noreferrer">Documentation technique application de bureau</a><br />
             <a href="https://jlauth.github.io/DocTechniqueAP3/API_REST/index.html" target='_blank' rel="noreferrer">Documentation technique API REST</a><br />
-            <a href={Contexte_officiel} download>Contexte officiel</a>
+            <a href={Contexte_officiel} download>Contexte officiel</a><br />
             <a href={Contrat_developpement} download>Contrat de développement</a><br />
             <a href={Cahier_des_charges} download>Cahier des charges</a><br />
             <a href={Dossier_documentaire} download>Dossier documentaire</a><br />
